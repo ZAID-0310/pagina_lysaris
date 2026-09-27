@@ -1,0 +1,29 @@
+"use client";
+
+import { motion } from 'framer-motion'
+import ProductCard from './ProductCard.jsx'
+
+export default function ProductsSection({ id, title, products = [], alt }) {
+  return (
+    <section id={id} className={`py-24 px-6 ${alt ? 'bg-cream2' : 'bg-cream'}`}>
+      <div className="max-w-6xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6 }}
+          className="font-display font-bold text-3xl md:text-4xl text-coral text-center mb-14"
+        >
+          {title}
+        </motion.h2>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((p, i) => (
+            /* se usa p.id para llamar a los productos */
+            <ProductCard key={p.id ?? `${p.name}-${i}`} index={i} {...p} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
