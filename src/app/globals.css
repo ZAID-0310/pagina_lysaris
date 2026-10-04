@@ -2,13 +2,13 @@
 
 @theme {
   --color-paper: #ffffff;
-  --color-cream: #fbf2e4;
-  --color-cream2: #f3e8d7;
-  --color-olive: #5f6b45;
-  --color-ink: #4a3b28;
-  --color-honey: #d9a441;
-  --color-honeyDeep: #ad7b26;
-  --color-coral: #d97757;
+  --color-cream: #ffffff;
+  --color-cream2: #f3e4df;
+  --color-olive: #6b7a4f;
+  --color-ink: #2e1f24;
+  --color-honey: #c2447e;
+  --color-honeyDeep: #9b2f62;
+  --color-coral: #7d2c52;
 }
 
 html {
@@ -17,23 +17,22 @@ html {
 
 body {
   overflow-x: clip;
-  background: #fbf2e4;
-  color: #4a3b28;
+  background: #ffffff;
+  color: #2e1f24;
   font-family: 'Poppins', sans-serif;
-  
 }
 
 ::selection {
-  background: #d9a441;
-  color: #fff;
+  background: #c2447e;
+  color: #ffffff;
 }
 
 .paper-texture {
-  background-image: radial-gradient(circle at 1px 1px, rgba(95, 107, 69, 0.07) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(107, 122, 79, 0.08) 1px, transparent 0);
   background-size: 22px 22px;
 }
 
 .glass {
-  background: rgba(255, 253, 249, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
 }
