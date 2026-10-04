@@ -57,10 +57,11 @@ export default function InfoSection() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.4 }}
-            className="bg-paper rounded-2xl p-7 border border-olive/10 hover:border-honey/60 hover:-translate-y-1 hover:shadow-xl hover:shadow-honeyDeep/10 transition-all duration-300"
+            className="group relative bg-paper rounded-2xl p-7 border border-olive/10 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/5"
           >
-            <c.icon className="text-honeyDeep mb-4" size={28} strokeWidth={1.6} />
-            <h3 className="font-display font-semibold text-lg text-honeyDeep mb-2">{c.title}</h3>
+            <span className="absolute inset-x-0 top-0 h-[3px] bg-honey scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
+            <c.icon className="text-olive mb-4" size={28} strokeWidth={1.6} />
+            <h3 className="font-display font-semibold text-lg text-coral mb-2">{c.title}</h3>
             <p className="text-sm leading-relaxed text-ink/80">{c.text}</p>
           </motion.div>
         ))}

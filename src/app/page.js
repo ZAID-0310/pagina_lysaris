@@ -1,7 +1,7 @@
 
-import Hero from './components/Hero'
-import InfoSection from './components/InfoSection';
-import ProductsSection from './components/ProductsSection';
+import Hero from '../components/landing/Hero'
+import InfoSection from '../components/landing/InfoSection';
+import ProductsSection from '../components/landing/ProductsSection';
 import {ramosXpress,girasoles} from '@/data/products'
 export default function Home() {
   return (

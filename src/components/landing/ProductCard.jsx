@@ -12,7 +12,7 @@ export default function ProductCard({ image, name, price, description, index = 0
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
       whileHover={{ y: -8 }}
-      className="group bg-paper rounded-3xl overflow-hidden border border-olive/10 hover:shadow-2xl hover:shadow-honeyDeep/15 transition-shadow duration-300"
+      className="group bg-paper rounded-3xl overflow-hidden border border-olive/20 hover:shadow-xl hover:shadow-ink/10 transition-shadow duration-300"
     >
       <div className="relative aspect-[4/5] overflow-hidden bg-cream2">
         <Image
@@ -23,7 +23,7 @@ export default function ProductCard({ image, name, price, description, index = 0
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
-        <span className="absolute top-4 right-4 bg-olive text-cream text-sm font-semibold rounded-full px-3 py-1 shadow-md">
+        <span className="absolute top-4 right-4 bg-olive text-paper text-sm font-semibold rounded-full px-3 py-1 shadow-md">
           {price}
         </span>
         <Heart

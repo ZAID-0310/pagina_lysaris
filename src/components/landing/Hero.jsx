@@ -17,7 +17,7 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent
   WHATSAPP_MESSAGE
 )}`;
 
-// Una sola secuencia de entrada: título → año → bloque de acción.
+// Una sola secuencia de entrada: título → texto → bloque de acción.
 const sequence = {
   hidden: {},
   show: { transition: { staggerChildren: 0.18, delayChildren: 0.1 } },
@@ -27,7 +27,7 @@ const rise = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-// Sombra suave para que el texto se lea sobre fotos claras (flores amarillas).
+// Sombra suave para que el texto se lea sobre fotos claras.
 const SHADOW = "[text-shadow:0_2px_24px_rgba(0,0,0,0.4)]";
 
 export default function Hero() {
@@ -48,7 +48,6 @@ export default function Hero() {
       aria-labelledby="hero-title"
       className="relative h-[100svh] min-h-[640px] overflow-hidden"
     >
-      {/*  */}
       <motion.div
         style={{ y: reduceMotion ? 0 : parallaxY }}
         className="absolute inset-0 scale-110"
@@ -64,14 +63,9 @@ export default function Hero() {
       </motion.div>
 
       {/* Legibilidad: degradado que se mantiene oscuro hasta el 60% y recién
-          después se funde a crema, más una viñeta detrás del texto. */}
+          después se funde al fondo, más una viñeta detrás del texto. */}
       <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/35 via-60% to-cream" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(74,59,40,0.35),transparent_65%)]" />
-
-      {/* Abejas: el detalle memorable del hero */}
-      <FloatingBee className="top-[18%] left-[12%]" delay={0} />
-      <FloatingBee className="top-[28%] right-[16%]" delay={0.8} />
-      <FloatingBee className="top-[12%] right-[35%]" delay={1.6} />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(46,31,36,0.35),transparent_65%)]" />
 
       <motion.div
         style={{ opacity: contentOpacity }}
@@ -95,7 +89,6 @@ export default function Hero() {
             variants={rise}
             className="mt-6 flex w-full max-w-sm flex-col items-center sm:max-w-none"
           >
-            {/* Adapta este texto: qué ofreces y cómo se pide */}
             <p className={`max-w-xl text-base text-paper/95 sm:text-lg ${SHADOW}`}>
               Elige tu ramo, nosotros lo armamos
             </p>
@@ -107,7 +100,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 whileHover={reduceMotion ? undefined : { scale: 1.03 }}
                 whileTap={reduceMotion ? undefined : { scale: 0.98 }}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-honey px-8 py-4 font-semibold text-ink shadow-lg shadow-honeyDeep/30 transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paper sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-honey px-8 py-4 font-semibold text-paper shadow-lg shadow-honeyDeep/25 transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paper sm:w-auto"
               >
                 <MessageCircle size={20} aria-hidden="true" />
                 Pedir por WhatsApp
@@ -141,27 +134,5 @@ export default function Hero() {
         </motion.a>
       </div>
     </section>
-  );
-}
-
-function FloatingBee({ className, delay }) {
-  const reduceMotion = useReducedMotion();
-
-  return (
-    <motion.svg
-      aria-hidden="true"
-      focusable="false"
-      width="26"
-      height="18"
-      viewBox="0 0 26 18"
-      className={`absolute z-10 ${className}`}
-      animate={reduceMotion ? undefined : { y: [0, -10, 0], rotate: [0, -6, 0] }}
-      transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay }}
-    >
-      <ellipse cx="9" cy="9" rx="8" ry="6" fill="#3B2E17" />
-      <rect x="4" y="6" width="10" height="6" fill="#D9A441" />
-      <circle cx="20" cy="8" r="4" fill="#3B2E17" />
-      <ellipse cx="10" cy="2" rx="6" ry="3" fill="#FFF" opacity="0.5" />
-    </motion.svg>
   );
 }
