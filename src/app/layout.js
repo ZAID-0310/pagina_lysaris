@@ -8,6 +8,11 @@ const poppins = Poppins({
   weight: ['400', '500', '600', '700'] 
 });
 
+export const metadata = {
+  title: 'Lysaris Florería | Arreglos Florales y Detalles',
+  description: 'Página oficial de Lysaris Florería. Compra de arreglos florales, detalles y detalles personalizados.',
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es">  
