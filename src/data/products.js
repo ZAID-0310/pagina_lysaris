@@ -59,3 +59,34 @@ export const girasoles = [
     description: 'Sencillo, elegante y lleno de significado.',
   },
 ]
+
+export const ramos = [
+    {
+      id: 1,
+      nombre: "Ramo Primavera",
+      precio: "S/45.00",
+      descripcion: "Arreglo silvestre con variedad de flores frescas de temporada.",
+      imagen: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 2,
+      nombre: "Girasoles Radiantes",
+      precio: "S/38.00",
+      descripcion: "Arreglo vibrante de girasoles seleccionados a mano.",
+      imagen: "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 3,
+      nombre: "Rosas Elegancia",
+      precio: "S/55.00",
+      descripcion: "Rosas rojas premium acompañadas de fino follaje y envoltura.",
+      imagen: "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 4,
+      nombre: "Rosas Elegancia",
+      precio: "S/55.00",
+      descripcion: "Rosas rojas premium acompañadas de fino follaje y envoltura.",
+      imagen: "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=800&q=80",
+    },
+  ];
