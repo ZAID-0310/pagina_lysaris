@@ -107,7 +107,7 @@ export default function Hero() {
               </motion.a>
 
               <a
-                href="#xpress"
+                href="/catalogo"
                 className="inline-flex w-full items-center justify-center rounded-full border border-paper/70 px-8 py-4 font-medium text-paper backdrop-blur-sm transition-colors hover:bg-paper/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paper sm:w-auto"
               >
                 Ver catálogo

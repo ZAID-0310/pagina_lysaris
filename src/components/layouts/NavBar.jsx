@@ -60,7 +60,7 @@ export default function Navbar() {
         className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
       >
         <motion.a
-          href="/#top"
+          href="/"
           style={{ color: overPhoto ? logoColor : 'rgba(125,44,82,1)' }}
           className="font-script text-2xl inline-flex items-center gap-2"
         >

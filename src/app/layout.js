@@ -2,6 +2,7 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layouts/NavBar';
 import Footer from '@/components/layouts/Footer';
+import WhatsAppButton from '@/components/layouts/WhatsappButton';
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -17,9 +18,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">  
       <body className={poppins.className}>
-        <Navbar></Navbar>
+        <Navbar/>
         {children}
-        <Footer></Footer>
+        <Footer/>
+        <WhatsAppButton />
         </body>
     </html>
   );
