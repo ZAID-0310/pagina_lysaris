@@ -8,11 +8,11 @@ const cards = [
     icon: CalendarClock,
     title: 'Cómo agendar',
     text: 'Se requiere un anticipo del 50%, sin excepción. El saldo se liquida el 19 de septiembre o un día antes de la entrega. Por temporada alta no se aceptan pedidos personalizados.',
-  },
+  }, 
   {
     icon: CreditCard,
     title: 'Métodos de pago',
-    text: 'Aceptamos Yape, Plin y transferencias. Pago con tarjeta vía Mercado Pago. No manejamos reembolsos. Yape/Plin: +51 936 716 909 · Bruno Salazar.',
+    text: 'Aceptamos Yape, Plin, transferencias bancarias y pagos con tarjeta mediante Mercado Pago. Consulta los datos de pago al realizar tu pedido.',
   },
   {
     icon: Truck,
@@ -44,7 +44,7 @@ export default function InfoSection() {
           Información importante
         </motion.h2>
         <p className="mt-3 text-ink/80">
-          Cerramos pedidos el <strong>19 de septiembre</strong>. Agenda con anticipación.
+          Consulta la disponibilidad y agenda tu pedido con anticipación.
         </p>
       </div>
 

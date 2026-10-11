@@ -66,7 +66,7 @@ export default function Navbar() {
         >
         <Image 
             alt="icono de empresa" 
-            src="/icono.jpg"
+            src="/ico.jpg"
             width={48}
             height={48} 
             className="rounded-2xl object-cover" 

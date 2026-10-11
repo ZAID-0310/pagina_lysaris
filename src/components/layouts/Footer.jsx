@@ -30,7 +30,7 @@ export default function Footer() {
       {/* --- SECCIÓN INFERIOR RESPONSIVA --- */}
       <div className="mt-14 pt-6 border-t border-cream/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-cream/50">
         <p>
-          Cerramos pedidos el 19 de septiembre · Agenda con anticipación
+          Nos importa tu confianza y cariño en cada pedido.
         </p>
         <p>
           Todos los derechos reservados © Lysaris

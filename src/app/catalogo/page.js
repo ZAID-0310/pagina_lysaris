@@ -1,7 +1,7 @@
 import {ramos} from "@/data/products";
 
 export default function Catalogo() {
-  const phoneNumber = "51937111149"; // Tu número de WhatsApp
+  const phoneNumber = "51937111149"; // Numero de whatsapp de la tienda
 
   return (
     <main>
