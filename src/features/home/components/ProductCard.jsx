@@ -2,9 +2,13 @@
 import { motion } from 'framer-motion'
 import { Heart } from 'lucide-react'
 import Image from 'next/image'
-
+const PHONE_NUMBER = "51937111149"; // Número de WhatsApp de la tienda
 
 export default function ProductCard({ image, name, price, description, index = 0 }) {
+    const mensaje = encodeURIComponent(
+    `¡Hola! Me interesa pedir el arreglo "${name}" (${price}). ¿Tienen disponibilidad?`
+  )
+  const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${mensaje}`
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -32,10 +36,19 @@ export default function ProductCard({ image, name, price, description, index = 0
           strokeWidth={1.8}
         />
       </div>
-      <div className="p-5">
+            <div className="p-5">
         <h3 className="font-script text-2xl text-coral">{name}</h3>
         <p className="text-sm text-ink/80 mt-1 leading-relaxed">{description}</p>
         <p className="text-xs text-olive mt-2">Incluye envoltura + dedicatoria + nutriente</p>
+
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 block w-full rounded-lg bg-green-500 py-3 px-6 text-center text-xs font-bold uppercase text-white shadow-md transition-all hover:bg-green-600 hover:scale-105 active:opacity-[0.85]"
+        >
+          Pedir por WhatsApp
+        </a>
       </div>
     </motion.article>
   )

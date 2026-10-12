@@ -11,6 +11,8 @@ const poppins = Poppins({
 
 
 export const metadata = {
+
+  
   metadataBase: new URL('https://florerialysaris.web.app'),
 
   title: 'Lysaris | Florería en Lima y Ramos de Flores',
